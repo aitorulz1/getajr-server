@@ -1,0 +1,26 @@
+{
+  "name": "getajr",
+  "version": "1.0.0",
+  "description": "Get a Junior Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aitorulz1/getajr-server.git"
+  },
+  "keywords": [
+    "junior"
+  ],
+  "author": "Aitor Arina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aitorulz1/getajr-server/issues"
+  },
+  "homepage": "https://github.com/aitorulz1/getajr-server#readme",
+  "devDependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  }
+}
