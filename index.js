@@ -16,4 +16,5 @@ app.listen(PORT, () => {
   console.log(`El servidor está funcionando en el puerto ${PORT}`);
 });
 
-app.use("/jr/juniors", require("./routes/juniors"));
+app.use("/users", require("./routes/user"));
+app.use("/auth", require("./routes/auth"));
