@@ -18,4 +18,6 @@ router.get("/:id", userController.getTheUser)
 
 router.get("/", userController.getAllUsers)
 
+router.delete("/:id", userController.deleteUser)
+
 module.exports = router;

@@ -29,7 +29,7 @@ exports.crearUser = async (req, res) => {
 
     const payload = {
       user: {
-        id: user.id,
+        id: user.id
       },
     };
 
@@ -72,6 +72,36 @@ exports.getTheUser = async(req, res) => {
 
 
 
+// Edit a Specific User
+
+// exports.editUser = async(req, res) => {
+//   try {
+//     const newUser = await User.findByIdAndUpdate(req.params.id)
+//   } catch (error) {
+//     console.log(error);
+//     res.status(400).send("Hubo un error editando el usuario");
+//   }
+// }
+
+
+
+// Delete a Specific User
+
+exports.deleteUser = async(req, res) => {
+  try {
+    const userDeleted = await User.findByIdAndDelete(req.params.id)
+    if(!userDeleted) {
+      res.status(400).json({msg:'El usuario no existe'})
+    }
+    res.json('El usuario se ha eliminado con éxito')
+  } catch (error) {
+    console.log(error);
+    res.status(400).send("Hubo un error eliminando el usuario");
+  }
+}
+
+
+
 // Get all Users
 
 exports.getAllUsers = async(req, res) => {
@@ -92,3 +122,5 @@ exports.getAllUsers = async(req, res) => {
   }
 
 }
+
+
